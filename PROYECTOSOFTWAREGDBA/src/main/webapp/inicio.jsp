@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Software</title>
+    <link rel="stylesheet" href="inicio.css"/>
+    <style>
+        html {
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        body {
+            margin: 3rem auto;
+            background-color: white;
+            border: solid 1px black;
+            padding: 25px;
+            max-width: 650px;
+            text-align: center;
+        }
+
+        form {
+            border: solid 1px black;
+            padding: 25px;
+            margin: 1rem auto;
+            max-width: 90%;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+            color: green;
+        }
+
+        label, input {
+            display: block;
+            margin: 12px auto;
+            width: 85%;
+        }
+
+        input {
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 4px;
+        }
+
+        .botones {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        button {
+            padding: 12px 18px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .ingresar {
+            background-color: green;
+            color: white;
+        }
+
+        .ingresar:hover {
+            background-color: darkgreen;
+        }
+
+        .registrar {
+            background-color: red;
+            color: white;
+        }
+
+        .registrar:hover {
+            background-color: darkred;
+        }
+
+        .olvidar {
+            background: none;
+            border: none;
+            color: blue;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .olvidar:hover {
+            text-decoration: underline;
+        }
+
+        .logo {
+            max-width: 160px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <section class="general">
+        <form action="procesaracceso" method="post">
+            <img src="https://media-hosting.imagekit.io/35674c52648d4333/LOGO%20ASORECICOL.jpg?Expires=1837743453&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=1qrrBIa18a83kKnycCS4c3CqSRdFuz5t0r4rddeAxqm1y5xL0LQa8tRmBMFWySu2Rr~ltfBRmclNPO4cv1BwTReLclGKBL-AvvT9j9y4yicOVbMMwdOjSlQgx1wFS5liJtN~MhaaY9sZZUjHjZIa6XagsSXTTVpObAbyT8AmJa3x5cU7vMd-M45z15yofdARzRPU6kgIlq1fB3KPbEYyLYXOKOBooiSyOoxHN8dJZYGpcWO0TVfEvP12iF6GbPsRzyhwrfW5NkbzheUmcN-HCs07MpJLgceNrixGJWimjlmbvt2-zcUZbxYnts8kLsrmcxfu~wm3QhGHJCuGqk9T8A_" alt="Logo Asorecicol" class="logo">
+            <h1>ASORECICOL</h1>  
+            <label for="usuario">Usuario</label>
+            <input type="text" id="usuario" name="usuario" placeholder="Ingrese su usuario" />
+            <label for="contraseña">Contraseña</label>
+            <input type="password" id="contraseña" name="contraseña" placeholder="Ingrese su contraseña" />
+            <button class="olvidar" type="button" onclick="window.location.href = 'contrasena_olvidada.jsp'">¿Olvidó su contraseña?</button>
+            <div class="botones">
+                <button class="ingresar" type="submit">Iniciar</button>
+                <button class="registrar" type="button" onclick="window.location.href = 'registro.jsp'">Registrar</button>
+            </div>
+        </form>
+    </section>
+</body>
+</html>
